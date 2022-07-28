@@ -28,6 +28,15 @@ describe('cats routes', () => {
     });
   });
 
+  it('/pokemon/attacks/:id returns attacks for a pokemon by id', async () => {
+    const res = await request(app).get('/pokemon/attacks/1');
+
+    expect(res.body).toEqual({
+      name: 'bulbasaur',
+      attacks: ['leech seed', 'razor wind']
+    });
+  });
+
   afterAll(() => {
     pool.end();
   });
