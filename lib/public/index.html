@@ -54,8 +54,40 @@
             </td>
             <td class="table-cell p-3">
               <a href="/pokemon/attacks/1" target="_blank" class="text-blue-700"
-                >Get pokemon 1 with attacks</a
-              >
+                >Get pokemon 1 with attacks</a>
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/attacks</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">
+              Returns the attacks matching the id in the parameter
+            </td>
+            <td class="table-cell p-3">
+              <a href="/attacks" target="_blank" class="text-blue-700"
+                >Get all attacks</a>
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/attacks/:id</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">
+              Returns the attack with matching id in the parameter
+            </td>
+            <td class="table-cell p-3">
+              <a href="/attacks/1" target="_blank" class="text-blue-700"
+                >Get one attack with matching id parameter</a>
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/attacks/pokemon-with-attacks/:id</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">
+              Returns all pokemon with the attack matching the id parameter
+            </td>
+            <td class="table-cell p-3">
+              <a href="/attacks/pokemon-with-attack/1" target="_blank" class="text-blue-700"
+                >get all the pokemon with specified attack</a>
             </td>
           </tr>
         </tbody>
