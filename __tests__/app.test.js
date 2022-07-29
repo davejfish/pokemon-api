@@ -3,7 +3,7 @@ const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
 
-describe('cats routes', () => {
+describe('routes', () => {
   beforeEach(() => {
     return setup(pool);
   });
@@ -34,6 +34,39 @@ describe('cats routes', () => {
     expect(res.body).toEqual({
       name: 'bulbasaur',
       attacks: ['leech seed', 'razor wind']
+    });
+  });
+
+  it('/attacks returns a list of attacks', async () => {
+    const res = await request(app).get('/attacks');
+
+    expect(res.body.length).toEqual(13);
+    expect(res.body[0]).toEqual({
+      id: expect.any(String),
+      atk_name: expect.any(String),
+    });
+  });
+
+  it('/attacks/:id returns detail about a single attack', async () => {
+    const res = await request(app).get('/attacks/1');
+
+    expect(res.body).toEqual({
+      id: '1',
+      atk_name: 'leech seed',
+      atk_type: 'grass',
+    });
+  });
+
+  it('/attacks/pokemon-with-attack/:id returns all pokemon with a single attack', async () => {
+    const res = await request(app).get('/attacks/pokemon-with-attack/1');
+
+    expect(res.body).toEqual({
+      attack: 'leech seed',
+      pokemon: [
+        'bulbasaur',
+        'ivysaur',
+        'venasaur',
+      ]
     });
   });
 
