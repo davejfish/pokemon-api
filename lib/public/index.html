@@ -1,97 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/styles.css" rel="stylesheet" />
-    <title>AnyAPI</title>
-  </head>
-  <body>
-    <header class="bg-gray-700 text-white p-4">
-      <h1 class="text-lg font-semibold">Zodiac</h1>
-    </header>
-    <main class="p-4 w-1/2 m-auto">
-      This API uses a list of Cartoon Cats signs as its resource. The routes are
-      as follows:
-      <table class="table border-2 mt-4">
-        <thead class="table-header-group border-2">
-          <tr>
-            <th class="table-cell p-3">Route</th>
-            <th class="table-cell p-3">Method</th>
-            <th class="table-cell p-3 w-40">Description</th>
-            <th class="table-cell p-3">Example</th>
-          </tr>
-        </thead>
-        <tbody class="table-row-group">
-          <tr class="border-2">
-            <td class="table-cell p-3"><pre>/pokemon</pre></td>
-            <td class="table-cell p-3 text-center">GET</td>
-            <td class="table-cell p-3">Gets a list of pokemon names and ids</td>
-            <td class="table-cell p-3">
-              <a href="/pokemon" target="_blank" class="text-blue-700"
-                >List pokemon</a
-              >
-            </td>
-          </tr>
-          <tr class="border-2">
-            <td class="table-cell p-3"><pre>/pokemon/:id</pre></td>
-            <td class="table-cell p-3 text-center">GET</td>
-            <td class="table-cell p-3">
-              Returns the detail about the pokemon matching the id in the parameter
-            </td>
-            <td class="table-cell p-3">
-              <a href="/pokemon/1" target="_blank" class="text-blue-700"
-                >Get pokemon 1</a
-              >
-            </td>
-          </tr>
-          <tr class="border-2">
-            <td class="table-cell p-3"><pre>/pokemon/attacks/:id</pre></td>
-            <td class="table-cell p-3 text-center">GET</td>
-            <td class="table-cell p-3">
-              Returns the pokemon with attacks matching the id in the parameter
-            </td>
-            <td class="table-cell p-3">
-              <a href="/pokemon/attacks/1" target="_blank" class="text-blue-700"
-                >Get pokemon 1 with attacks</a>
-            </td>
-          </tr>
-          <tr class="border-2">
-            <td class="table-cell p-3"><pre>/attacks</pre></td>
-            <td class="table-cell p-3 text-center">GET</td>
-            <td class="table-cell p-3">
-              Returns the attacks matching the id in the parameter
-            </td>
-            <td class="table-cell p-3">
-              <a href="/attacks" target="_blank" class="text-blue-700"
-                >Get all attacks</a>
-            </td>
-          </tr>
-          <tr class="border-2">
-            <td class="table-cell p-3"><pre>/attacks/:id</pre></td>
-            <td class="table-cell p-3 text-center">GET</td>
-            <td class="table-cell p-3">
-              Returns the attack with matching id in the parameter
-            </td>
-            <td class="table-cell p-3">
-              <a href="/attacks/1" target="_blank" class="text-blue-700"
-                >Get one attack with matching id parameter</a>
-            </td>
-          </tr>
-          <tr class="border-2">
-            <td class="table-cell p-3"><pre>/attacks/pokemon-with-attacks/:id</pre></td>
-            <td class="table-cell p-3 text-center">GET</td>
-            <td class="table-cell p-3">
-              Returns all pokemon with the attack matching the id parameter
-            </td>
-            <td class="table-cell p-3">
-              <a href="/attacks/pokemon-with-attack/1" target="_blank" class="text-blue-700"
-                >get all the pokemon with specified attack</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pokemon api</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <h2>pokemon api</h2>
+
+    <section>
+      <table>
+      <tr>
+        <th>route</th>
+        <th>method</th>
+        <th>description</th>
+        <th>example</th>
+      </tr>
+      <tr>
+        <td>/pokemon</td>
+        <td>GET</td>
+        <td>gets a list of all pokemon</td>
+        <td><a href="/pokemon">pokemon</a></td>
+      </tr>
+      <tr>
+        <td>/pokemon/:id</td>
+        <td>GET</td>
+        <td>get the detail about a pokemon with matching id</td>
+        <td><a href='/pokemon/1'>pokemon/1<a></td>
+      </tr>
+      <tr>
+        <td>/pokemon/attacks/:id</td>
+        <td>GET</td>
+        <td>get the attacks for a pokemon with matching id</td>
+        <td><a href='/pokemon/attacks/1'>pokemon/attacks/1<a></td>
+      </tr>
+      <tr>
+        <td>/attacks</td>
+        <td>GET</td>
+        <td>get all attacks</td>
+        <td><a href='/attacks'>attacks<a></td>
+      </tr>
+      <tr>
+        <td>/attacks/:id</td>
+        <td>GET</td>
+        <td>get the detail about an attack with matching id</td>
+        <td><a href='/attacks/1'>attacks/1<a></td>
+      </tr>
+      <tr>
+        <td>/attacks/pokemon-with-attack/:id</td>
+        <td>GET</td>
+        <td>get a list of pokemon with matching attack</td>
+        <td><a href='/attacks/pokemon-with-attack/1'>/attacks/pokemon-with-attack/1<a></td>
+      </tr>
+    </table>
+    </section>
+  </main>
+  
+  
+</body>
+
 </html>
